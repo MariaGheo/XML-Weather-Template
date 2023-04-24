@@ -24,6 +24,26 @@ namespace XMLWeather
             tempOutput.Text = Form1.days[0].currentTemp + "°C";
             minOutput.Text = Form1.days[0].tempLow + "°C";
             maxOutput.Text = Form1.days[0].tempHigh + "°C";
+            windOutput.Text = "Wind: " + Form1.days[0].windSpeed + " m/s " + Form1.days[0].windDirection;
+
+            int temp = Convert.ToInt32(Form1.days[0].currentTemp);
+
+            if (temp > 25)
+            {
+                BackColor = Color.FromArgb(50, 10, 10);
+            }
+            else if (temp > 15)
+            {
+                BackColor = Color.FromArgb(10, 10, 10);
+            }
+            else if(temp > 0)
+            {
+                BackColor = Color.FromArgb(10, 10, 17);
+            }
+            else
+            {
+                BackColor = Color.FromArgb(10, 10, 23);
+            }
 
             switch (Form1.days[0].icon)
             {

@@ -29,6 +29,7 @@ namespace XMLWeather
                 new Label[] { date6Output, max6Output, min6Output },
                 new Label[] { date7Output, max7Output, min7Output },
             };
+
             PictureBox[] pictureBoxes =
             {
                 conditionsPictureBox1, conditionsPictureBox2, conditionsPictureBox3, conditionsPictureBox4, conditionsPictureBox5, conditionsPictureBox6, conditionsPictureBox7
@@ -97,6 +98,25 @@ namespace XMLWeather
                         pictureBoxes[i].Image = Properties.Resources._50n;
                         break;
                 }
+            }
+
+            int temp = Convert.ToInt32(Form1.days[1].tempHigh);
+
+            if (temp > 25)
+            {
+                BackColor = Color.FromArgb(50, 10, 10);
+            }
+            else if (temp > 15)
+            {
+                BackColor = Color.FromArgb(10, 10, 10);
+            }
+            else if (temp > 0)
+            {
+                BackColor = Color.FromArgb(10, 10, 17);
+            }
+            else
+            {
+                BackColor = Color.FromArgb(10, 10, 23);
             }
         }
 

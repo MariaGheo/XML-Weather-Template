@@ -86,6 +86,13 @@ namespace XMLWeather
             reader.ReadToFollowing("city");
             days[0].location = reader.GetAttribute("name");
 
+            reader.ReadToFollowing("speed");
+            double speed = Math.Round(Convert.ToDouble(reader.GetAttribute("value")));
+            days[0].windSpeed = Convert.ToString(speed);
+
+            reader.ReadToFollowing("direction");
+            days[0].windDirection = reader.GetAttribute("code");
+
             reader.ReadToFollowing("temperature");
             double temp = Math.Round(Convert.ToDouble(reader.GetAttribute("value")));
             days[0].currentTemp = Convert.ToString(temp);

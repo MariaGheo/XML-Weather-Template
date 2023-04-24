@@ -39,6 +39,7 @@
             this.locationInput = new System.Windows.Forms.TextBox();
             this.currentPictureBox = new System.Windows.Forms.PictureBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.windOutput = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.currentPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             this.maxOutput.BackColor = System.Drawing.Color.Transparent;
             this.maxOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxOutput.ForeColor = System.Drawing.Color.White;
-            this.maxOutput.Location = new System.Drawing.Point(187, 297);
+            this.maxOutput.Location = new System.Drawing.Point(198, 277);
             this.maxOutput.Name = "maxOutput";
             this.maxOutput.Size = new System.Drawing.Size(88, 31);
             this.maxOutput.TabIndex = 32;
@@ -72,7 +73,7 @@
             this.minOutput.BackColor = System.Drawing.Color.Transparent;
             this.minOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minOutput.ForeColor = System.Drawing.Color.White;
-            this.minOutput.Location = new System.Drawing.Point(363, 297);
+            this.minOutput.Location = new System.Drawing.Point(374, 277);
             this.minOutput.Name = "minOutput";
             this.minOutput.Size = new System.Drawing.Size(95, 31);
             this.minOutput.TabIndex = 30;
@@ -84,7 +85,7 @@
             this.tempOutput.BackColor = System.Drawing.Color.Transparent;
             this.tempOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempOutput.ForeColor = System.Drawing.Color.White;
-            this.tempOutput.Location = new System.Drawing.Point(196, 174);
+            this.tempOutput.Location = new System.Drawing.Point(196, 159);
             this.tempOutput.Name = "tempOutput";
             this.tempOutput.Size = new System.Drawing.Size(262, 106);
             this.tempOutput.TabIndex = 28;
@@ -146,7 +147,7 @@
             // 
             // currentPictureBox
             // 
-            this.currentPictureBox.Location = new System.Drawing.Point(429, 88);
+            this.currentPictureBox.Location = new System.Drawing.Point(429, 73);
             this.currentPictureBox.Name = "currentPictureBox";
             this.currentPictureBox.Size = new System.Drawing.Size(100, 100);
             this.currentPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,11 +169,26 @@
             this.searchButton.UseVisualStyleBackColor = false;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
+            // windOutput
+            // 
+            this.windOutput.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.windOutput.AutoSize = true;
+            this.windOutput.BackColor = System.Drawing.Color.Transparent;
+            this.windOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.windOutput.ForeColor = System.Drawing.Color.White;
+            this.windOutput.Location = new System.Drawing.Point(257, 329);
+            this.windOutput.Name = "windOutput";
+            this.windOutput.Size = new System.Drawing.Size(85, 20);
+            this.windOutput.TabIndex = 94;
+            this.windOutput.Text = "windspeed";
+            this.windOutput.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // CurrentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(23)))));
+            this.Controls.Add(this.windOutput);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.currentPictureBox);
             this.Controls.Add(this.locationInput);
@@ -206,5 +222,6 @@
         private System.Windows.Forms.PictureBox currentPictureBox;
         private System.Windows.Forms.Label maxOutput;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Label windOutput;
     }
 }
