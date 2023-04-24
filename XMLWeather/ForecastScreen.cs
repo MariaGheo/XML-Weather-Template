@@ -142,10 +142,16 @@ namespace XMLWeather
                 Form1.ExtractForecast(newLocation);
                 Form1.ExtractCurrent(newLocation);
                 displayForecast();
+
+                Form1.location = newLocation;
             }
             catch
             {
                 locationInput.Text = "Location not found";
+                string newLocation = locationInput.Text;
+                Form1.ExtractForecast(Form1.location);
+                Form1.ExtractCurrent(Form1.location);
+                displayForecast();
             }
         }
     }
