@@ -9,13 +9,6 @@ using System.Windows.Forms;
 using System.Net;
 using System.Xml;
 
-/*
- * to do:
- * - round the temperature numbers - done!
- * - make the search system functional
- * - make the dates look nicer (just the day of the week, not the full date)
- */
-
 
 namespace XMLWeather
 {
